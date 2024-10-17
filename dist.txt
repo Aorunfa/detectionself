@@ -1,0 +1,16 @@
+dist training multi gpus
+00 setup
+01 model
+02 data; dataset只在主卡上进行cache; 
+03 optime
+04 validation只在主卡上进行
+04 dist run
+
+单机多卡
+多机多卡 (包含单机多卡)
+基本原理：
+    cuda环境初始化
+    数据partion
+    模型相同初始化在所有gpu, seed for all
+
+    
