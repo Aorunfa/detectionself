@@ -1,2 +1,2 @@
 # detectionself
-a self repo for detection algorithm learning adn code customizing
+a self repo for detection algorithm learning and code customizing
