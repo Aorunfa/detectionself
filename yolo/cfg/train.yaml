@@ -6,8 +6,8 @@ mode: train # (str) YOLO mode, i.e. train, val, predict, export, track, benchmar
 
 # Train settings -------------------------------------------------------------------------------------------------------
 model: # (str, optional) path to model file, i.e. yolov8n.pt, yolov8n.yaml
-data: /home/chaofeng/yolo/code/cfg/coco.yaml
-save_dir: /home/chaofeng/yolo/code/data_scrach
+data: /home/chaofeng/detectionself/yolo/cfg/coco.yaml
+save_dir: /home/chaofeng/detectionself/yolo/data_scrach
 epochs: 100 # (int) number of epochs to train for
 time: # (float, optional) number of hours to train for, overrides epochs if supplied
 patience: 100 # (int) epochs to wait for no observable improvement for early stopping of training

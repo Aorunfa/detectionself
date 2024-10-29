@@ -63,8 +63,7 @@ class InfiniteDataLoader(dataloader.DataLoader):
 PIN_MEMORY = str(os.getenv("PIN_MEMORY", True)).lower() == "true"  # global pin_memory for dataloaders
 RANK = int(os.getenv("RANK", -1))
 
-from yolo.code.dataset import YoloDataset
-
+from detectionself.yolo.dataset import YoloDataset
 def build_yolo_dataset(cfg, img_path, batch, data, mode="train", rect=False, stride=32, multi_modal=False):
     """Build YOLO Dataset."""
     dataset = YoloDataset

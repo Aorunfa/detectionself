@@ -1,2 +1,3 @@
 # detectionself
-a self repo for detection algorithm learning and code customizing
+a self repo for detection algorithm learning adn code customizing
+ori repo for some detection alg for learning
