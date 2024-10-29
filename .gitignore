@@ -1,2 +1,5 @@
 RT-DETR/
 yolo/data*/
+Deformable-DETR/
+yolov7/tools
+yolov7/inference

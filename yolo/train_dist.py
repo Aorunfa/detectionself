@@ -3,7 +3,7 @@
 import sys
 import os
 # os.environ["CUDA_VISIBLE_DEVICES"]="0,1"
-os.environ["CUDA_VISIBLE_DEVICES"]="2,3"
+os.environ["CUDA_VISIBLE_DEVICES"]="3"
 
 import torch.amp
 from torch.cuda.amp import autocast
@@ -684,8 +684,8 @@ if __name__ == '__main__':
 
     # ########################################## rtdetr training job ##########################################
     from model import DetectionModelv8
-    model_cfg = '/home/chaofeng/yolo/code/cfg/yolov11m.yaml'
-    train_cfg = '/home/chaofeng/yolo/code/cfg/train.yaml'
+    model_cfg = '/home/chaofeng/detectionself/yolo/cfg/yolov11m.yaml'
+    train_cfg = '/home/chaofeng/detectionself/yolo/cfg/train.yaml'
     ckpt_path = None
     # ckpt_path = '/chaofeng/yolo/code/data_scrach/weights/best.pt'
     model = DetectionModelv8(cfg=model_cfg)
@@ -713,5 +713,5 @@ if __name__ == '__main__':
 
     nohup /root/anaconda3/envs/yolo/bin/python -m torch.distributed.run --nproc_per_node 2 --nnodes 1 /chaofeng/yolo/code/train_dist.py > /chaofeng/yolo/code/n_scrach_v11.log 2>&1 &
 
-    python -m torch.distributed.run --nproc_per_node 2 --nnodes 1 /home/chaofeng/yolo/code/train_dist.py
+    python -m torch.distributed.run --nproc_per_node 1 --nnodes 1 /home/chaofeng/detectionself/yolo/train_dist.py
     """
